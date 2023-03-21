@@ -17,3 +17,4 @@
 ### Reference:
 [JavaScript Mastery tutorial](https://www.youtube.com/watch?v=0fYi8SGA20k)
 
+<i>Several 3D models and components were implement by myself. <br /></i>

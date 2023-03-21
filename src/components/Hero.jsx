@@ -15,14 +15,34 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915eff]">ihrow</span>
+            Hi, I'm <span className="text-[#915eff]">ihrow.</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a passionate <span className="text-[#5e99ff]">React</span> and <span className="text-[#fff25e]">Javascript</span> developer with a strong desire to continuously learn and improve my skills.<br /> I approach challenges with a positive "can do" attitude and I am always eager to take on new projects and gain valuable work experience.
+            A passionate <span className="font-bold text-[#5e99ff]">React</span> and <span
+            className="font-bold text-[#fff25e]">Javascript</span> developer.
           </p>
         </div>
       </div>
-      <ComputersCanvas />
+      <ComputersCanvas/>
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+        <a href="#about">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+            <motion.div
+              animate={{
+                y: [0, 24, 0]
+            }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: 'loop',
+                repeatDelay: 1.5
+            }}
+              className="w-3 h-3 rounded-full bg-secondary mb-1"
+            />
+
+          </div>
+        </a>
+      </div>
     </section>
   )
 }

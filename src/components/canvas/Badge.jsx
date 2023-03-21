@@ -5,8 +5,8 @@ import {OrbitControls, Preload, useGLTF} from "@react-three/drei";
 import CanvasLoader from '../Loader'
 import {useMobile} from "../hooks/useMobile.js";
 
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+const Badge = ({ isMobile }) => {
+  const badge = useGLTF("./badge/scene.gltf");
   return (
     <mesh>
       <hemisphereLight
@@ -15,27 +15,29 @@ const Computers = ({ isMobile }) => {
       />
       <pointLight intensity={1} />
       <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
+        position={[80, 50, 5]}
+        intensity={1.25}
+        color="white"
       />
+      <ambientLight />
       <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.5, -1.5]}
-        rotation={[-0.01, 0.2, -0.1]}
+        object={badge.scene}
+        scale={isMobile ? 0.07 : 0.07}
+        position={isMobile ? [0, -3, -2.2] : [10, 0, 0]}
+        rotation={[0, 1.5, 0]}
       />
     </mesh>
   );
 };
 
-const ComputersCanvas = () => {
+const BadgeCanvas = () => {
   const isMobile = useMobile();
   return (
     <Canvas
       frameloop="demand"
       shadows
       camera={{
-        position: [20, 3, 5],
+        position: [200, 3, 5],
         fov: 25
       }}
       gl={{
@@ -50,10 +52,11 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Badge isMobile={isMobile} />
       </Suspense>
       <Preload all />
     </Canvas>
   );
 };
-export default ComputersCanvas;
+
+export default BadgeCanvas;

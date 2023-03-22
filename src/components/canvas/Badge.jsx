@@ -23,7 +23,7 @@ const Badge = ({ isMobile }) => {
       <primitive
         object={badge.scene}
         scale={isMobile ? 0.07 : 0.07}
-        position={isMobile ? [0, -3, -2.2] : [10, 0, 0]}
+        position={isMobile ? [0, -3, -2.2] : [0, 0, 0]}
         rotation={[0, 1.5, 0]}
       />
     </mesh>

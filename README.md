@@ -1,4 +1,4 @@
-### A nicely done `not yet` portfolio website.
+### A nicely done portfolio website.
 
 ![img](https://i.imgur.com/KNY2igJ.jpg)
 

@@ -3,7 +3,7 @@
 ![img](https://i.imgur.com/KNY2igJ.jpg)
 
 ## Preview:
-[*Click*](portfolio-reactjs.netlify.app)
+[*Click*](https://ihrow.netlify.app)
 
 
 ### Tech Stack:

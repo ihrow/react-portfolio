@@ -65,9 +65,9 @@ const About = () => {
            <br />
            I'm a quick learner and believe in the importance of continuous learning and strive to improve my skills in all the technologies I work with.
          </motion.p>
-         <div className="h-[320px] w-[320px] mt-10">
-           <BadgeCanvas />
-         </div>
+         {/*<div className="h-[320px] w-[320px] mt-10">*/}
+         {/*  <BadgeCanvas />*/}
+         {/*</div>*/}
         </div>
 
       <div className="mt-20 flex flex-wrap gap-10">

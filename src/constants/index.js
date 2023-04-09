@@ -1,7 +1,6 @@
 import {
   none,
   mobile,
-  backend,
   creator,
   web,
   javascript,
@@ -14,16 +13,12 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   threejs,
   shareme,
   tictactoe,
-  preview
+  preview,
+  movieSearch,
+  animeDB,
 } from "../assets";
 
 export const navLinks = [
@@ -140,7 +135,46 @@ const projects = [
     image: shareme,
     source_code_link: "https://github.com/ihrow/shareme-react-app/",
     live_preview_link: "https://shareme-react-app.netlify.app/"
-
+  },
+  {
+    name: "MovieSearch App",
+    description:
+      "This is a simple React app that uses the OMDb API to search for movies.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "axios",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: movieSearch,
+    source_code_link: "https://github.com/ihrow/movie-search-app",
+    live_preview_link: "https://ihrow-search-movie-app.netlify.app/"
+  },
+  {
+    name: "AnimeDB",
+    description:
+      "This is a simple React app that uses Anilist API to fetch anime data.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: animeDB,
+    source_code_link: "https://github.com/ihrow/animeDB-react-app",
+    live_preview_link: "https://tv-anime.netlify.app/"
   },
   {
     name: "TicTacToeOnline",

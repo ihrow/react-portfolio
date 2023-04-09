@@ -29,6 +29,8 @@ import tesla from "./company/tesla.png";
 import none from "./company/R.png"
 import shareme from './shareme.jpg'
 import tictactoe from './tictactoe.png'
+import movieSearch from './movieSearch.jpg'
+import animeDB from './animeDB.jpg'
 
 import preview from './preview.png'
 
@@ -62,4 +64,6 @@ export {
   shopify,
   starbucks,
   tesla,
+  movieSearch,
+  animeDB,
 };

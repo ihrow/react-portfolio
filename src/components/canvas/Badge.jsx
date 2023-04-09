@@ -3,9 +3,8 @@ import { Canvas } from "@react-three/fiber/";
 import {OrbitControls, Preload, useGLTF} from "@react-three/drei";
 
 import CanvasLoader from '../Loader'
-import {useMobile} from "../hooks/useMobile.js";
 
-const Badge = ({ isMobile }) => {
+const Badge = () => {
   const badge = useGLTF("./badge/scene.gltf");
   return (
     <mesh>
@@ -22,8 +21,7 @@ const Badge = ({ isMobile }) => {
       <ambientLight />
       <primitive
         object={badge.scene}
-        scale={isMobile ? 0.07 : 0.07}
-        position={isMobile ? [0, -3, -2.2] : [0, 0, 0]}
+        scale={0.07}
         rotation={[0, 1.5, 0]}
       />
     </mesh>
@@ -31,7 +29,6 @@ const Badge = ({ isMobile }) => {
 };
 
 const BadgeCanvas = () => {
-  const isMobile = useMobile();
   return (
     <Canvas
       frameloop="demand"
@@ -52,7 +49,7 @@ const BadgeCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Badge isMobile={isMobile} />
+        <Badge />
       </Suspense>
       <Preload all />
     </Canvas>
